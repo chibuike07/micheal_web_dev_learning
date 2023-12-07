@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>complimentary</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper {
+        width: 50%;
+        min-height: 50vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 5px gray;
+        border-radius: 5px;
+      }
+
+      .wp_aside {
+        width: 50%;
+      }
+
+      .wp_as_top {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .wp_as_tp_img_wrap {
+        width: 50%;
+        height: 5em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-bottom: 0px;
+        position: relative;
+      }
+
+      .wp_as_tp_img_wrap img {
+        width: 100%;
+        height: 5em;
+        position: absolute;
+        left: -15%;
+        bottom: -30%;
+      }
+
+      .wp_as_tp_title {
+        border-bottom: 5px solid red;
+      }
+      .wp_as_tp_title h2 {
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+
+      .wp_as_bottom div span {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: red;
+      }
+
+      .wp_main {
+        width: 40%;
+        padding-left: 1.5rem;
+        border-left: 3px solid red;
+      }
+
+      .wp_mn_lists {
+        width: max-content;
+      }
+
+      .wp_mn_lists li {
+        text-transform: capitalize;
+        font-size: 1.02rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <aside class="wp_aside">
+          <div class="wp_as_top">
+            <div class="wp_as_tp_img_wrap">
+              <img src="./assets/construct.png" alt="logo" />
+            </div>
+            <header class="wp_as_tp_title">
+              <h2>kc emex builder lcd</h2>
+            </header>
+          </div>
+
+          <section class="wp_as_bottom">
+            <div><span>t:</span><strong>07482226522</strong></div>
+            <div><span>e:</span><small>kcemex@yahoo.com</small></div>
+          </section>
+        </aside>
+        <main class="wp_main">
+          <ul class="wp_mn_lists">
+            <li>general building</li>
+            <li>painting & decorating</li>
+            <li>plastering</li>
+            <li>logt conversions</li>
+            <li>extension</li>
+            <li>electrical installation</li>
+            <li>plumbing</li>
+            <li>carpentry</li>
+            <li>landscaping</li>
+          </ul>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

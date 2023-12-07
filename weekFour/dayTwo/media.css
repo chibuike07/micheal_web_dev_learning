@@ -1,0 +1,53 @@
+.container {
+  background-color: red;
+}
+
+/* reusable css */
+:root {
+  --primary-color: aqua;
+  --secondary-color:yellow;
+  --full-width: 100%
+}
+
+.wrapper {
+  background-color: blue;
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.child {
+  background-color: var(--primary-color);
+  width: 30%;
+  /* flex: 1; */
+  min-width: 200px;
+}
+
+/* @media only screen and (max-width: 500px) {
+  .child {
+    flex-grow: 0.7;
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .child {
+    font-size: 2rem;
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+  .child:nth-child(3) {
+    font-size: 2rem;
+    /* background-color: #ff0000; */
+    /* background-color: rgb(000, 000, 000); */
+    /* background-color: rgba(000, 000, 000, 0.7); */
+    /* background-color: hsl(10, 30%, 20%); */
+    /* background-color: rgb(255, 179, 0); */
+  /* } */
+/* } */
+
+index hsl rgb rgba hsla hwl name */

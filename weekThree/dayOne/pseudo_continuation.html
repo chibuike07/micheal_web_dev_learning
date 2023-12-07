@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo class</title>
+
+    <style>
+      .form input:disabled {
+        /* background-color: blue; */
+        border: gray;
+      }
+
+      .form input:not(:disabled) {
+        border: 2px solid red;
+      }
+
+      /* .section h3,
+      .section p {
+        font-size: small;
+        color: red;
+      } */
+
+      /* .section :is(h3, p) {
+        font-size: 3rem;
+      } */
+      /* .section :is(.heading, .paragraph) {
+        font-size: 3rem; */
+      /* } */
+
+      :where(.section, .article) h3,
+      p {
+        color: red;
+      }
+
+      .navlists {
+        background-color: red;
+      }
+
+      .lists {
+        list-style-type: none;
+        /* list-style-type: lower-roman; */
+      }
+
+      .lists li a {
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+
+      .lists li a:hover {
+        font-size: small;
+        border-bottom: 2px solid white;
+      }
+
+      .lists li a:focus {
+        color: green;
+      }
+      /* .lists li a:visited {
+        color: green;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- :seudo class -->
+
+    <form class="form">
+      <input type="text" disabled placeholder="enter name" />
+      <input type="text" placeholder="enter last name" />
+    </form>
+
+    <section class="section">
+      <h3 class="heading">heading</h3>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, fuga.
+      </p>
+    </section>
+    <article class="article">
+      <h3>heading</h3>
+      <p>
+        Perspiciatis delectus accusantium est architecto. Ad neque laudantium
+        similique nesciunt!
+      </p>
+    </article>
+
+    <nav class="navlists">
+      <ul class="lists">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">pages</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html pseudo class</title>
+    <style>
+      .container :first-child {
+        color: red;
+      }
+
+      .container :last-child {
+        text-decoration: underline;
+      }
+
+      .container :nth-child(3) {
+        transform: rotateX(180deg);
+        color: red;
+      }
+
+      .container :nth-child(odd) {
+        color: aqua;
+      }
+
+      .lists_wrapper :nth-child(even) {
+        list-style-type: lower-roman;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navlists">
+      <ul class="lists_wrapper">
+        <li><a href="#">one</a></li>
+        <li><a href="#">two</a></li>
+        <li><a href="#">two</a></li>
+        <li><a href="#">four</a></li>
+        <li><a href="#">five</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, qui.
+      </p>
+      <p>
+        Culpa dignissimos laudantium aspernatur, aliquid ex dolorum deserunt?
+        Nihil, ut?
+      </p>
+      <p>
+        Reprehenderit soluta exercitationem maiores! Praesentium voluptate aut
+        quo dolore ipsa!
+      </p>
+      <p>
+        Inventore obcaecati quam iste qui amet at consequatur excepturi laborum.
+      </p>
+      <p>
+        Est molestias ut, ad itaque dolorum consequuntur maxime iste ratione?
+      </p>
+      <p>
+        Quae fugit voluptates eaque suscipit quia corrupti. Pariatur,
+        exercitationem quam?
+      </p>
+    </div>
+  </body>
+</html>

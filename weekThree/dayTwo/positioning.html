@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+  </head>
+  <style>
+    /* .absolute {
+      width: 50%;
+      height: 30vh;
+      background-color: red;
+    } */
+
+    /* .absolute small {
+      position: absolute;
+      top: 50%;
+      bottom: 10%;
+      left: 40%;
+    } */
+    .absolute {
+      width: 50%;
+      height: 30vh;
+      background-color: red;
+      /* position: relative; */
+    }
+
+    .absolute small {
+      position: absolute;
+      /* top: 50%; */
+      /* bottom: 10%; */
+      /* left: 40%; */
+      right: 0%;
+    }
+
+    .relative {
+      width: 50%;
+      height: 30vh;
+      background-color: green;
+    }
+
+    .relative small {
+      position: relative;
+      top: 20%;
+      /* left: 20%; */
+      right: 5%;
+    }
+
+    .sticky {
+      background-color: red;
+      width: 30%;
+      height: 50vh;
+      overflow: auto;
+    }
+
+    .sticky table {
+      width: 100%;
+    }
+
+    .sticky_unique {
+      background-color: blue;
+      width: 100%;
+      position: sticky;
+      top: 0px;
+    }
+    .fixed {
+      background-color: purple;
+    }
+    .fixed small {
+      position: fixed;
+      right: 10%;
+      bottom: 10%;
+
+      color: red;
+      /* background-color: purple; */
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- kinds of positioning -->
+      <!-- static -->
+      <!-- absolute -->
+      <!-- relative -->
+      <!-- sticky -->
+      <!-- fixed -->
+
+      <div class="absolute">
+        <small>i move everywhere</small>
+      </div>
+      <div class="relative">
+        <small>i move within parent</small>
+      </div>
+      <div class="sticky">
+        <table>
+          <thead class="sticky_unique">
+            <tr>
+              <th>color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+            <tr>
+              <td>red</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fixed">
+        <small>plus</small>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          minima excepturi ut mollitia cumque, omnis autem esse eaque architecto
+          ex, voluptate placeat, repellendus natus totam nihil rem eligendi.
+          Accusamus, nesciunt!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

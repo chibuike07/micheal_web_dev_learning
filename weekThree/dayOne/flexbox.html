@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box</title>
+  </head>
+
+  <style>
+    .parent {
+      background-color: red;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      /* justify-content: space-evenly; */
+      /* justify-content: space-around; */
+    }
+
+    .parent .child {
+      background-color: green;
+      min-width: 250px;
+      width: 30%;
+      padding: 0.5rem;
+      flex-grow: 0.8;
+    }
+
+    .container {
+      width: 100%;
+      background-color: brown;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .container .child {
+      background-color: orange;
+      width: 30%;
+      /* height: 30vh; */
+    }
+  </style>
+  <body>
+    <!-- flex -->
+
+    <div class="parent">
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo a
+          laudantium non cupiditate quasi corrupti.
+        </p>
+      </section>
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Impedit, laboriosam quia! Dolore magni necessitatibus dolorum magnam
+          accusamus fugiat eius, laudantium totam officia qui!
+        </p>
+      </section>
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Aperiam, perferendis? Commodi explicabo consequuntur dolorem corrupti
+          omnis, error aperiam modi quia. Mollitia, consequuntur fugiat.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo a
+          laudantium non cupiditate quasi corrupti.
+        </p>
+      </section>
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Impedit, laboriosam quia! Dolore magni necessitatibus dolorum magnam
+          accusamus fugiat eius, laudantium totam officia qui!
+        </p>
+      </section>
+      <section class="child">
+        <h3>heading</h3>
+        <p>
+          Aperiam, perferendis? Commodi explicabo consequuntur dolorem corrupti
+          omnis, error aperiam modi quia. Mollitia, consequuntur fugiat.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

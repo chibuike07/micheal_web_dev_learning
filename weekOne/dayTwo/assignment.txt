@@ -1,0 +1,4 @@
+create a registration page that have an email, password and age field;
+create a list of animals(10);
+create two pages, home, and about pages that lets user navigate to the about from the homepage.
+create a table that has list of hairs, with the prices and quantity 

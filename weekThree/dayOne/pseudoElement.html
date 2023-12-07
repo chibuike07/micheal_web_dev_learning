@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo element</title>
+    <style>
+      .text::first-letter {
+        font-size: 2rem;
+        color: red;
+      }
+
+      .text::first-line {
+        color: green;
+      }
+
+      .text::selection {
+        color: red;
+      }
+
+      .text::before {
+        content: "coming from before";
+      }
+      .text::after {
+        content: "coming from after";
+        color: red;
+        font-size: larger;
+      }
+
+      .list li::marker {
+        font-size: 1.5rem;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ::pseuo element -->
+
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+      repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Molestias similique harum ab neque, explicabo, magnam vero praesentium aut
+      eum illum quo minus fugit perferendis vel! Eaque vero porro placeat
+      necessitatibus.
+    </p>
+
+    <ul class="list">
+      <li>lists</li>
+      <li>lists</li>
+      <li>lists</li>
+    </ul>
+  </body>
+</html>

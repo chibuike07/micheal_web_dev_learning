@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        background-color: red;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .wrapper {
+        background-color: blue;
+        padding: 1rem 0.5rem 2rem 5rem;
+        /* border-top: 1rem;
+        border-bottom: 0.4rem;
+        border-left: 0.2rem;
+        border-right: 2rem;
+        border-width: 10px;
+        border-color: pink;
+        border-style: solid; */
+        /* border: 10px solid red; */
+        /* border: 10px groove red; */
+        /* border: 10px dashed red; */
+      }
+
+      .heading {
+        /* margin: 2rem; */
+        /* padding: 2rem; */
+      }
+
+      .container {
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      .circle {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      /* specificity */
+      /* 1 1 1 */
+    </style>
+  </head>
+  <body>
+    <!-- selector : tagname, class, id, attribute{
+        bgc: red;
+    }-->
+    <section class="container">
+      <h2 class="heading">heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+        perspiciatis!
+      </p>
+    </section>
+    <section class="wrapper">
+      <h2>heading</h2>
+      <p>
+        Fuga reprehenderit qui maiores tenetur aut natus tempore voluptates!
+        Culpa!
+      </p>
+    </section>
+    <section class="holder">
+      <h2>heading</h2>
+      <p>Ab odio animi modi magni, asperiores corrupti illo minima tempore?</p>
+    </section>
+
+    <div class="circle"></div>
+  </body>
+</html>

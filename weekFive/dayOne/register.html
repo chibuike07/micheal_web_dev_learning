@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link rel="stylesheet" href="./register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <aside class="wp_aside">
+          <h2>general information</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            dolore repellendus sapiente error culpa vitae, accusamus voluptatum
+            possimus ducimus assumenda.
+          </p>
+        </aside>
+        <main class="wp_main">
+          <header class="wp_mn_header">
+            <h2>contact details</h2>
+          </header>
+          <form class="wp_mn_form">
+            <div class="wp_mn_fm_input field_design">
+              <input type="text" name="street" placeholder="street + Nr" />
+            </div>
+            <div class="wp_mn_fm_input field_design">
+              <input
+                type="text"
+                name="information"
+                placeholder="additional information"
+              />
+            </div>
+            <div class="wp_mn_fm_input_group field_design">
+              <input type="number" name="zipcode" placeholder="zip code" />
+              <select name="information">
+                <option value="" hidden>place</option>
+                <option value="lagos">lagos</option>
+                <option value="enugu">enugu</option>
+                <option value="portharcourt">portharcourt</option>
+              </select>
+            </div>
+            <div class="wp_mn_fm_input field_design">
+              <input type="text" name="country" placeholder="country" />
+            </div>
+
+            <div class="wp_mn_fm_input_group field_design">
+              <select name="code">
+                <option value="" hidden>code</option>
+                <option value="+234">+234</option>
+                <option value="+44">+44</option>
+              </select>
+              <input type="number" name="number" placeholder="phone number" />
+            </div>
+            <div class="wp_mn_fm_input field_design">
+              <input type="email" name="email" placeholder="your email" />
+            </div>
+
+            <div class="wp_mn_fm_agree">
+              <input type="checkbox" name="agreement" /><span
+                >i do accept the <a href="#">terms and conditions</a> of your
+                site</span
+              >
+            </div>
+            <div class="wp_mn_fm_btn_wrap">
+              <button>register badge</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

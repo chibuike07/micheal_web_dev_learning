@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html forms</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Enter your name</label><br />
+      <input type="text" name="name" id="name" placeholder="enter your name" />
+      <input
+        type="password"
+        name="password"
+        placeholder="enter your password"
+      />
+      <input
+        type="email"
+        inputmode="email"
+        name="email"
+        placeholder="enter email"
+      />
+      <input type="number" name="age" placeholder="enter age" />
+      <input type="date" name="date" required />
+      <input type="file" name="image" />
+      <input type="file" name="image" accept="image/*" />
+      <input type="file" name="image" accept="video/mp4" />
+      <input type="datetime-local" />
+      <input type="range" name="range" step="20" />
+      <input type="checkbox" name="checkbox" id="" />
+      <input type="radio" name="radio" value="male" />male
+      <input type="radio" name="radio" value="female" />female
+
+      <select name="cars">
+        <option value="benz">benz</option>
+        <option value="bmw">bmw</option>
+        <option value="ford">ford</option>
+      </select>
+
+      <input type="text" placeholder="select from the list" list="cars" />
+      <datalist id="cars">
+        <option value="benz">benz</option>
+        <option value="bmw">bmw</option>
+        <option value="ford">ford</option>
+      </datalist>
+      <button>submit</button>
+    </form>
+  </body>
+</html>
