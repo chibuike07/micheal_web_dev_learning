@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="javascript:;">
+      <input
+        type="text"
+        placeholder="Enter your name"
+        id="name"
+        name="name"
+        value="michael"
+      />
+
+      <input type="radio" name="gender" id="gender" value="male" checked />
+      male
+      <input type="radio" name="gender" id="gender" value="female" /> female
+      <input type="radio" name="gender" id="gender" value="transgender" />
+      transgender
+    </form>
+
+    <p id="confirm"></p>
+
+    <script type="text/javascript">
+      // input type of text
+      const input = document.querySelector("#name");
+      console.log("input.value", input.value);
+
+      //   input radio
+
+      const gender = document.querySelector("#gender");
+      const confirms = document.querySelector("#confirm");
+      console.log("gender", gender.checked);
+
+      //   reder value into an element
+      confirms.innerText = gender.checked;
+
+      //   get element with the same id/class
+      //   const genders = document.querySelectorAll("#gender");
+      //   console.log("genders", genders);
+    </script>
+  </body>
+</html>
