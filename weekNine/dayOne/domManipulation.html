@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc manipulation</title>
+  </head>
+  <body>
+    <!-- DOM -->
+    <!-- Document Object Model -->
+    <h2 id="heading" style="text-transform: uppercase">heading</h2>
+
+    <p>Lorem, ipsum.</p>
+
+    <section class="section">
+      <h3>heading three</h3>
+    </section>
+    <script type="text/javascript">
+      const headingElement = document.getElementById("heading");
+      // three way to get html values innerHTML, innerText; and textContent;
+      console.log("headingElement", headingElement);
+
+      //   displays the parent element and the nested elements
+      console.log("headingElement.innerHTML", headingElement.innerHTML);
+      //   displays just the text with its formatting
+      console.log("headingElement.innerText", headingElement.innerText);
+
+      //   displays the text without any formatting
+      console.log("headingElement.textContent", headingElement.textContent);
+
+      //   reference an element using tagname;
+
+      const paraElem = document.getElementsByTagName("p");
+      console.log("paraElem", paraElem[0].innerText);
+
+      const paragraphElem = document.querySelector("p");
+      console.log("paragrapraphElem.innerText", paragraphElem.innerText);
+
+      //   reference nested elements :
+
+      const nestedElem = document.querySelector(".section h3");
+      console.log("nestedElem.innerText", nestedElem.innerText);
+    </script>
+  </body>
+</html>
