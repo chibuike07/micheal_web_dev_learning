@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <h2>object</h2>
+
+    <!-- it can be refered to as a container that can hold large data -->
+
+    <!-- it comes in pair -->
+    <!-- syntax of {key:value} -->
+
+    <script type="text/javascript">
+      const person = {
+        name: "michael",
+        height: 1.7,
+        legs: 2,
+        complexison: "fair",
+        isDeveloper: true,
+      };
+
+      //   access an object dot notation and index notation
+
+      console.log("person", person.name);
+      console.log("isDeveloper", person.isDeveloper);
+
+      //   index notation
+
+      console.log('person["legs"]', person["legs"]);
+      console.log('person["complexison"]', person["complexison"]);
+
+      //   access keys of an object;
+
+      const keys = Object.keys(person);
+      console.log("keys", keys);
+
+      const values = Object.values(person);
+      console.log("values", values);
+
+      const entries = Object.entries(person);
+      console.log("entries", entries);
+    </script>
+  </body>
+</html>

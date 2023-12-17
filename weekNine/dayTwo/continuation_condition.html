@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>conditions</h2>
+
+    <small id="date"></small>
+
+    <p id="user"></p>
+    <script type="text/javascript">
+      // if, ifelse, elseif, switch, tenary operation; logical operation;
+
+      //   const user = window.prompt("Enter your name", "michael");
+
+      //   switch (user) {
+      //     case "michael":
+      //       alert(`welcome ${user}`);
+      //       break;
+      //     case "princewill":
+      //       alert(`welcome ${user}`);
+      //       break;
+
+      //     default:
+      //       console.log("connected");
+      //       break;
+      //   }
+
+      const date = new Date();
+
+      const hr = date.getHours();
+      const min = date.getMinutes();
+      const dateFormat = date.toLocaleDateString();
+      const day = date.getDay();
+      //   console.log("day", day);
+      //   console.log("dateFormat", dateFormat);
+      //   console.log("hr, min", hr, min);
+      //   console.log("date", date);
+
+      const dateElement = document.querySelector("#date");
+
+      switch (day) {
+        case 0:
+          dateElement.textContent = "today is sunday";
+          break;
+        case 1:
+          dateElement.textContent = "today is monday";
+          break;
+        case 2:
+          dateElement.textContent = "today is tuesday";
+          break;
+        case 3:
+          dateElement.textContent = "today is wednesday";
+          break;
+
+        default:
+          console.log("you are in another planet");
+          break;
+      }
+
+      //   tenary operation;
+
+      let name = "";
+
+      const userName = document.querySelector("#user");
+
+      name === "michael"
+        ? (userName.textContent = name)
+        : (userName.textContent = "Anonymous");
+
+      if (name === "michael") {
+        console.log("name", name);
+      } else {
+        console.log("not found");
+      }
+
+      //   elseif
+
+      name === "michael"
+        ? console.log("name", name)
+        : name === "princewill"
+        ? console.log("name", name)
+        : console.log("you are restricted.");
+
+      // logical operators;
+
+      //   name === "michael" && console.log("name", name);
+
+      //   if (name === "michael") {
+      //     console.log("name", name);
+      //   }
+
+      name === "michael" ||
+        (name === "princewill" && console.log("name", name));
+
+      name = undefined;
+      name ??= console.log("true", true);
+    </script>
+  </body>
+</html>
