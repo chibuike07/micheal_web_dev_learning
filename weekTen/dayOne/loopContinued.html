@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>loop</h3>
+
+    <ul id="lists"></ul>
+    <script type="text/javascript">
+      //   forin loop
+      const animals = ["dog", "cat", "horse", "snake"];
+      const person = {
+        name: "michael",
+        height: 1.7,
+        legs: 2,
+        complexison: "fair",
+        isDeveloper: true,
+      };
+
+      //   for (const key in person) {
+      //     console.log("key", key);
+      //     console.log("person[key]", person[key]);
+      //   }
+
+      //   reference the ul element;
+      const ulLists = document.querySelector("#lists");
+
+      console.log("animals[0]", animals[2]);
+      //   accessing the animal array
+      for (const index in animals) {
+        // creating the li element
+        const liEleme = document.createElement("li");
+
+        // adding the animal into the li element
+        liEleme.textContent = animals[index];
+
+        // nesting the li into the ul element;
+        ulLists.appendChild(liEleme);
+      }
+
+      //   for arrays only
+      for (const garri of animals) {
+        console.log("garri", garri);
+        // console.log('first', first)
+      }
+    </script>
+  </body>
+</html>
