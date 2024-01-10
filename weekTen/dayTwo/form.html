@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login form</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <header>
+          <h2>sum two number of your choice</h2>
+        </header>
+
+        <pre id="result"></pre>
+
+        <ul id="lists"></ul>
+        <form action="javascript:;">
+          <input
+            type="number"
+            placeholder="Enter number"
+            id="first"
+            name="first"
+          />
+          <input
+            type="number"
+            placeholder="Enter number"
+            id="second"
+            name="second"
+          />
+
+          <div>
+            <button id="btn" onclick="sumNumbers()">add</button>
+            <button id="btn" onclick="multiply()">multiply</button>
+            <button id="btn" onclick="arrowFunction()">divide</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./functions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+const gloceries = [
+  { name: "green", price: 10, currency: "NIG" },
+  { name: "salad", price: 50, currency: "NIG" },
+  { name: "cucumber", price: 30, currency: "NIG" },
+];
+
+// 1. log the gloceries name;
+// 2. access the gloceries  and list the prices in a ul Element;
+// 3. add a new gloceries to the list of gloceries;
+// 4. define an object with the following properties; item price and quantity add values to all the properties;

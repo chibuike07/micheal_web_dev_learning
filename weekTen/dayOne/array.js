@@ -1,5 +1,5 @@
 // array is reffered to an a container that can hold larger items;
-// push, pop, shift, unshift, includes, map, sort, filter, forEach, splice, slice, fill, reduce, splice, concat;
+// push, pop, shift, unshift, includes, map, sort, filter, forEach, splice, slice, fill, reduce, concat;
 
 const animals = ["dog", "cat", "horse", "snake"];
 const num = [1, 5, 3, 2, 6, 4];
