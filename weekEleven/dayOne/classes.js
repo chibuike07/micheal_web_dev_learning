@@ -8,7 +8,6 @@ function Animals(name, color) {
 
 Animals.prototype.sound = function () {
   let sound;
-  //   console.log("this.name", this.name);
   switch (this.name) {
     case "cat":
       sound = "meewee";
@@ -17,13 +16,12 @@ Animals.prototype.sound = function () {
       sound = "mmeee";
       break;
     case "bmw":
-      sound = "thats is car";
+      sound = `that is car ${this.name}`;
       break;
 
     default:
       break;
   }
-  console.log("sound", sound);
   return sound;
 };
 
@@ -40,9 +38,7 @@ function Car(name, color, company) {
 }
 
 Car.prototype = Object.create(Animals.prototype);
-console.log("Car.prototype", Car.prototype);
 let car1 = new Car("bmw", "red", "bmw").sound();
-console.log("car1", car1);
 
 // es6 class
 
@@ -53,29 +49,23 @@ class Animal {
     this.price = 0;
     this.sound = "";
   }
-
   sounds() {
     switch (this.name) {
       case "cat":
-        this.sound = "meewee";
-        break;
+        return (this.sound = "meewee");
+
       case "goat":
-        this.sound = "mmeee";
-        break;
+        return (this.sound = "mmeee");
       case "bmw":
-        this.sound = "";
-        break;
-      case "benz":
+        return (this.sound = `this is a ${this.name}`);
+      case "c class":
         this.sound = `this is a ${this.name}`;
         break;
-
       default:
         break;
     }
-    // clo
     return this;
   }
-
   prices(price) {
     this.price = price;
     return this;
@@ -95,5 +85,13 @@ class Cars extends Animal {
   }
 }
 
-let carOne = new Cars("benz", "blue", "benz").prices(500).sounds();
+let carOne = new Cars("c class", "blue", "benz").prices(500).sounds();
 console.log("carOne", carOne);
+
+// carOne Cars {
+//   name: 'c class',
+//   color: 'blue',
+//   price: 500,
+//   sound: 'this is a c class',
+//   company: 'benz'
+// }

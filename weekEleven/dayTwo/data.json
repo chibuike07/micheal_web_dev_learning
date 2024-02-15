@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "John",
+      "surname": "paul",
+      "height": 0.7,
+      "isTall": true
+    },
+    {
+      "name": "michael",
+      "surname": "onyia",
+      "height": 0.9,
+      "isTall": true
+    }
+  ]
+}

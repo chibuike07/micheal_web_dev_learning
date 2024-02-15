@@ -1,0 +1,100 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: #fff;
+}
+.wrapper .innerContainer {
+  width: 100%;
+}
+.wrapper .innerContainer .category_header {
+  padding: 1rem;
+}
+.wrapper .innerContainer .category_header h2 {
+  text-transform: capitalize;
+}
+.wrapper .innerContainer .product_wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0px 1rem;
+  justify-content: space-between;
+}
+.wrapper .innerContainer .product_wrapper .card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: rgb(66, 66, 176);
+  color: #fff;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  overflow: auto;
+  position: relative;
+}
+@media only screen and (max-width: 670px) {
+  .wrapper .innerContainer .product_wrapper .card {
+    max-width: 100%;
+  }
+}
+.wrapper .innerContainer .product_wrapper .card img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .innerContainer .product_wrapper .card .card_title_wrapper {
+  padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.wrapper .innerContainer .product_wrapper .card .card_title_wrapper small {
+  background-color: #ccc;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.wrapper .innerContainer .product_wrapper .card .card_desc {
+  padding: 0.5rem;
+  line-height: 1.5;
+}
+.wrapper .innerContainer .product_wrapper .card .card_PriceWrapper {
+  padding: 0.5rem;
+}
+.wrapper .innerContainer .product_wrapper .card .card_PriceWrapper sub {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.wrapper .innerContainer .product_wrapper .card .card_PriceWrapper sup {
+  color: #ff0000;
+  font-size: 1.1rem;
+}
+.wrapper .innerContainer .product_wrapper .card .card_btn {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 2%;
+  right: 0%;
+}
+.wrapper .innerContainer .product_wrapper .card .card_btn button {
+  width: 100px;
+  height: 2em;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  color: #fff;
+  transition: background-color 500ms ease-in-out;
+}
+.wrapper .innerContainer .product_wrapper .card .card_btn button:hover {
+  background-color: #ff0000;
+}/*# sourceMappingURL=project.css.map */

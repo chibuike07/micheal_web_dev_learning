@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+  <body>
+    <!-- local storage is use to persist data to the browser -->
+
+    <div class="container">
+      <div class="wrapper">
+        <header>
+          <h2>local storage</h2>
+        </header>
+
+        <form action="javascript:;">
+          <div>
+            <input type="text" placeholder="add todo" name="todo" id="todo" />
+            <small id="errorMessage"></small>
+          </div>
+
+          <button onclick="addTodo()">add todo</button>
+        </form>
+        <section id="displayTodo"></section>
+        <small id="NoContextErrorMessage"></small>
+      </div>
+    </div>
+    <script src="./todo.js"></script>
+  </body>
+</html>

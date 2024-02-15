@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>request</title>
+  </head>
+  <body>
+    <h2>request with javascript</h2>
+
+    <!-- request: is a way to create a connection between the client and the server through an API gateway -->
+
+    <!-- API application programming interface  -->
+    <!-- client => API => server -->
+
+    <!-- Javascript allows us to perform all those request with the help of protocol -->
+
+    <!-- http protocol and https protocol -->
+    <!-- http grant you local access with no much security -->
+    <!-- https grant you local access and live access with security consign-->
+
+    <!-- javascript with a method called fetch method which is used to make a request -->
+
+    <div class="container"></div>
+    <script>
+      let num = 6;
+      // promises
+      const fulful = new Promise((resolve, reject) => {
+        if (num === 10) {
+          resolve(num);
+        }
+
+        reject("num does not match");
+      });
+
+      try {
+        let res = fulful.then((result) => console.log(result));
+        // console.log("res :>> ", res);
+      } catch (error) {
+        console.log("error.message :>> ", error);
+      }
+
+      //   got the text in a text file;
+      fetch("./text.txt", {
+        "Content-Type": "application/text",
+      })
+        .then((result) => result.text())
+        .then((data) => console.log("data :>> ", data));
+
+      // access a json file
+      fetch("./data.json", {
+        "Content-Type": "application/json",
+      })
+        .then((result) => result.json())
+        .then((data) => console.log("data :>> ", data));
+      // get, post,put, delete,
+      // fetching data from the server
+      fetch("https://jsonplaceholder.typicode.com/users", {
+        method: "GET",
+        "Content-Type": "application/json",
+      })
+        .then((response) => response.json())
+        .then(function (data) {
+          console.log("data :>> ", data);
+          const container = document.querySelector(".container");
+          //   loop throught the data array
+          data.length > 0 &&
+            data.forEach(
+              ({
+                name,
+                username,
+                website,
+                phone,
+                id,
+                email,
+                address: { city, suit, street },
+                company: { name: companyName },
+              }) => {
+                // create elements
+                const title = document.createElement("h3");
+                const badge = document.createElement("small");
+                const email_ = document.createElement("address");
+                const phone_ = document.createElement("address");
+                const city_ = document.createElement("span");
+                const suit_ = document.createElement("span");
+                const street_ = document.createElement("address");
+                const name_ = document.createElement("small");
+                const website_ = document.createElement("small");
+                const info = document.createElement("div");
+
+                // adjust the textcontent of the elements
+                title.textContent = name;
+                badge.textContent = username;
+                email_.textContent = email;
+                phone_.textContent = phone;
+                street_.textContent = street;
+                suit_.textContent = suit;
+                website_.textContent = website;
+                city_.textContent = city;
+                name_.textContent = companyName;
+
+                // add them into their parent element
+                info.appendChild(badge);
+                info.appendChild(name_);
+
+                // add them into their parent element and dispay all in the browser
+                container.appendChild(title);
+                container.appendChild(info);
+                container.appendChild(email_);
+                container.appendChild(phone_);
+                container.appendChild(city_);
+                container.appendChild(suit_);
+                container.appendChild(website_);
+              }
+            );
+        });
+
+      const formData = {
+        id: 1,
+        name: "michael onyia",
+        username: "Bret",
+        email: "Sincere@april.biz",
+        address: {
+          street: "Kulas Light",
+          suite: "Apt. 556",
+          city: "Gwenborough",
+          zipcode: "92998-3874",
+          geo: {
+            lat: "-37.3159",
+            lng: "81.1496",
+          },
+        },
+        phone: "1-770-736-8031 x56442",
+        website: "hildegard.org",
+        company: {
+          name: "Romaguera-Crona",
+          catchPhrase: "Multi-layered client-server neural-net",
+          bs: "harness real-time e-markets",
+        },
+      };
+
+      //   send data to the server
+      fetch("https://jsonplaceholder.typicode.com/users", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data :>> ", data);
+        })
+        .catch((err) => {
+          console.error("error", err.message);
+        });
+
+      // update the server;
+      fetch("https://jsonplaceholder.typicode.com/users/3", {
+        method: "PUT",
+        body: JSON.stringify({ username: "michael" }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data :>> ", data);
+        })
+        .catch((err) => {
+          console.error("error", err.message);
+        });
+
+      // delete from the server
+      fetch("https://jsonplaceholder.typicode.com/users/4", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data :>> ", data);
+        })
+        .catch((err) => {
+          console.error("error", err.message);
+        });
+    </script>
+  </body>
+</html>
